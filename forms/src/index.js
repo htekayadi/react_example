@@ -3,15 +3,19 @@ import { render } from 'react-dom';
 import './semantic-ui/semantic.min.css';
 import './index.css';
 
+import One from './01-basic-button.js';
+import Two from './02-basic-button.js';
+import Three from './03-basic-input.js';
+import Four from './04-basic-input.js';
+
 const routes = [
-  One
+  One, Two, Three, Four
 ];
 
-import One from './01-basic-button.js';
 
 const location = window.location;
 window.addEventListener('hashchange', location.reload.bind(location));
-const loc = location.hash.replace('$/', '');
+const loc = location.hash.replace('#/', '');
 const element = loc ? createRoute(loc) : createTOC();
 
 const container = document.createElement('div');
