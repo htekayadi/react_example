@@ -10,11 +10,11 @@ import Four from './04-basic-input.js';
 import Five from './05-state-input.js';
 import Six from './06-state-input-multi.js';
 import Seven from './07-basic-validation.js';
+import Eight from './08-field-component-form.js'
 
 const routes = [
-  One, Two, Three, Four, Five, Six, Seven,
+  One, Two, Three, Four, Five, Six, Seven, Eight
 ];
-
 
 const location = window.location;
 window.addEventListener('hashchange', location.reload.bind(location));
@@ -45,10 +45,10 @@ function createRoute(nStr) {
   if (i > routes.length - 1) i = routes.length - 1;
 
   const navStyle = {
-    position: 'fixed', bottom: 50, textAligh: 'center', left: '10%'
+    position: 'fixed', bottom: 50, textAlign: 'center', left: '10%'
   };
-  const isFirst = 1 <=0;
-  const isLast = 1 >= routes.length - 1;
+  const isFirst = i <= 0;
+  const isLast = i >= routes.length - 1;
 
   return (
     <div className="ui container">
@@ -58,8 +58,8 @@ function createRoute(nStr) {
         { isFirst ? '' : <a href={`#/${i}`} className='item'>{'<'}</a> }
         <a href={location.href.replace(location.hash, '')}
            className='item'
-           >TOC</a>
-        { isLast ? '' : <a href={`#/${(i + 2)}`} className='item'>{' > '}</a> }
+          >TOC</a>
+        { isLast ? '' : <a href={`#/${(i + 2)}`} className='item'>{'>'}</a> }
       </div>
     </div>
   );
