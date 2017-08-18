@@ -7,9 +7,12 @@ import One from './01-basic-button.js';
 import Two from './02-basic-button.js';
 import Three from './03-basic-input.js';
 import Four from './04-basic-input.js';
+import Five from './05-state-input.js';
+import Six from './06-state-input-multi.js';
+import Seven from './07-basic-validation.js';
 
 const routes = [
-  One, Two, Three, Four
+  One, Two, Three, Four, Five, Six, Seven,
 ];
 
 
